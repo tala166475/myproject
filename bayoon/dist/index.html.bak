@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Animated Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500|Roboto:400,500,700&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Design and content inspired from Giulio Cuscito :- https://dribbble.com/shots/7129691--Blue-Planet-Carousel-Concept -->
+
+<div class="app-container">
+  <section class="navigation">
+    <a href="#" class="app-link">اسم المشروع السياحي</a>
+    <div class="navigation-links">
+      <a href="#" class="nav-link ">حسابي</a>
+      <a href="#" class="nav-link active">الحجوزات</a>
+      <a href="#" class="nav-link">حول الموقع</a>
+      <a href="#" class="nav-link">تفاصيل المشروع</a>
+    </div>
+    <div class="nav-right-side">
+      <button class="mode-switch">
+       <svg class="sun" fill="none" stroke="#fbb046" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-sun" viewBox="0 0 24 24"><defs/><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  <svg class="moon" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-moon" viewBox="0 0 24 24"><defs/><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+     </button>
+      <!-- <button class="profile-btn">
+      <span>بيان العش</span>
+      <img src="https://images.unsplash.com/photo-1492633397843-92adffad3d1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80" alt="pp">
+    </button> -->
+    </div>  
+  </section>
+
+
+  <style>
+    .introduction{
+      background-image: url("damascus.jpg");
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      padding: 30px;    
+     position:relative;
+    }
+  </style>
+  <section class="introduction">
+  <h1>الجمهورية العربية السورية والسياحة بها</h1>
+  <p>
+    الجمهورية العربية السورية هي دولة في الشرق الأوسط، تحدها تركيا من الشمال، والعراق من الشرق، والأردن وفلسطين من الجنوب، ولبنان والبحر الأبيض المتوسط من الغرب.
+    تتميز سوريا بتاريخها العريق وثقافتها الغنية، وتضم مجموعة متنوعة من المواقع التاريخية والطبيعية الساحرة التي تستحق الزيارة.
+  </p>
+  <p>
+    إحدى المعالم البارزة في سوريا هي مدينة دمشق، والتي تعتبر أقدم مستوطنة حضرية مأهولة في العالم.
+    تتميز بأزقتها الضيقة والمباني العربية التقليدية والأسواق القديمة التي تعكس الثقافة والتاريخ السوري.
+  </p>
+<section>
+  <script>
+    window.onload = function() {
+      // تغيير ارتفاع صورة الخلفية لتناسب ارتفاع النص
+      var backgroundImage = document.querySelector("introduction").style.backgroundImage;
+      document.querySelector("introduction").style.height = window.innerHeight + "px";
+      document.querySelector("introduction").style.backgroundSize = "auto " + window.innerHeight + "px";
+    }
+  </script>
+
+<section class='c-slider'>
+  <div class='c-slider-init'>
+
+    <div class='c-slide' style='background-image:url("https://images.unsplash.com/photo-1504461407194-07c608d0989b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1900&q=100")'>
+      <div class='c-slide-content'>
+        <div class='c-wrap c-wrap--line'>
+          <h2 class='c-slide__title'>
+            Underwater
+            <span class='c-slide__title--large'>Monsters</span>
+          </h2>
+        </div>
+        <div class='c-wrap c-wrap--small'>
+          <div class='c-slide__info'>
+            <h3 class='c-slide__subtitle'>Saltwater Crocodile</h3>
+            <p class='c-slide__body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='c-slide' style='background-image:url("https://images.unsplash.com/photo-1544745494-3d8dd3fa1564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1900&q=100")'>
+      <div class='c-slide-content'>
+        <div class='c-wrap c-wrap--line'>
+          <h2 class='c-slide__title'>
+            The
+            <span class='c-slide__title--medium'>Gates of Hell</span>
+          </h2>
+        </div>
+        <div class='c-wrap c-wrap--small'>
+          <div class='c-slide__info'>
+            <h3 class='c-slide__subtitle'>Special inside volcanoes</h3>
+            <p class='c-slide__body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='c-slide' style='background-image:url("https://images.unsplash.com/photo-1528214096798-37891d32174c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1900&q=100")'>
+      <div class='c-slide-content'>
+        <div class='c-wrap c-wrap--line'>
+          <h2 class='c-slide__title'>
+            Exploring
+            <span class='c-slide__title--large'>Deep Caves</span>
+          </h2>
+        </div>
+        <div class='c-wrap c-wrap--small'>
+          <div class='c-slide__info'>
+            <h3 class='c-slide__subtitle'>Real Time Capsules</h3>
+            <p class='c-slide__body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <section class="introduction">
+  <h1>الجمهورية العربية السورية والسياحة بها</h1>
+  <p>
+    الجمهورية العربية السورية هي دولة في الشرق الأوسط، تحدها تركيا من الشمال، والعراق من الشرق، والأردن وفلسطين من الجنوب، ولبنان والبحر الأبيض المتوسط من الغرب.
+    تتميز سوريا بتاريخها العريق وثقافتها الغنية، وتضم مجموعة متنوعة من المواقع التاريخية والطبيعية الساحرة التي تستحق الزيارة.
+  </p>
+  <p>
+    إحدى المعالم البارزة في سوريا هي مدينة دمشق، والتي تعتبر أقدم مستوطنة حضرية مأهولة في العالم.
+    تتميز بأزقتها الضيقة والمباني العربية التقليدية والأسواق القديمة التي تعكس الثقافة والتاريخ السوري.
+  </p>
+<section>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://rawgit.com/cfoehrdes/slick/master/slick/slick.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

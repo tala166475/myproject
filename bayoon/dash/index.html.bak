@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Products Dashboard UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+
+<link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+ 
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="app-container">
+  
+  <div class="app-content">
+    <div class="app-content-header">
+      <h1 class="app-content-headerText">الأماكن الأكثر زيارة لدى الأدمن</h1>
+      <button class="app-content-headerButton">←</button>
+      
+    </div>
+    <div class="app-content-actions">
+      <input class="search-bar" placeholder="Search..." type="text">
+      <div class="app-content-actions-wrapper">
+        <div class="filter-button-wrapper">
+          <button class="action-button filter jsFilter"><span>Filter</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></button>
+          <div class="filter-menu">
+            <label>التصنيفات</label>
+            <select>
+              <option>جميع التصنيفات</option>
+              <option>الفنادق</option>                     
+              <option>المطاعم</option>
+              <option>الآثار</option>
+              <option>الطبيعة</option>
+            </select>
+            <label>الحالة</label>
+            <select>
+              <option>جميع الحالات</option>
+              <option>الأكثر زيارةً</option>
+              <option>الأقل زيارةً</option>
+            </select>
+            <div class="filter-menu-buttons">
+              <button class="filter-button reset">
+                إعادة 
+              </button>
+              <button class="filter-button apply">
+                تطبيق 
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="action-button list active" title="List View">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        </button>
+        <button class="action-button grid" title="Grid View">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="products-area-wrapper tableView">
+      <div class="products-header">
+        <div class="product-cell image">
+          المكان السياحي: 
+          <button class="sort-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+          </button>
+        </div>
+        <div class="product-cell category">للتصنيف<button class="sort-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+          </button></div>
+        <div class="product-cell status-cell">حالته<button class="sort-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+          </button></div>
+        <div class="product-cell sales">الزيارات بهذا اليوم<button class="sort-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+          </button></div>
+        <div class="product-cell stock">الزيارات بهذا الشهر<button class="sort-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+          </button></div>
+        <div class="product-cell price">تكلفة قضاء اليوم<button class="sort-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+          </button></div>
+        <div class="product-cell option">خيــارات<button class="sort-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+          </button></div>          
+      </div>
+      
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+        
+        
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+          <div class="product-cell image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+            <span>اسم المكان السياحي</span>
+          </div>
+        <div class="product-cell category"><span class="cell-label">التصنيف:</span>فنادق</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">الحالة:</span>
+          <span class="status active">الأكثر زيارة</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">معدل الزيارات اليومي:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">معدل الويارات الشهري:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">تكلفة قضاء اليوم:</span>$560</div>
+        <div class="product-cell option"><span class="cell-label">خيار :</span>
+
+        <div class="dropdown">
+         <button onclick="toggleDropdown()" class="dropbtn">•••</button>
+           <ul id="myDropdown" class="dropdown-content">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+           </ul>
+        </div>
+
+       </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+<style>
+
+</style>
+<!-- partial -->
+
+<script>
+
+  
+document.addEventListener('DOMContentLoaded', function () {
+  var modeSwitch = document.querySelector('.mode-switch');
+
+  modeSwitch.addEventListener('click', function () {
+    document.documentElement.classList.toggle('dark');
+  });
+});
+
+function openModal(){
+  let modal= document.querySelector('#modal-window');
+  modal.classList.add("showModal");
+}
+
+function closeM(){
+    let m= document.querySelector('#modal-window');
+  m.classList.remove("showModal");
+}
+
+document.getElementsByClassName('.mode-switch').onclick = function() {
+  document.body.classList.toggle('dark');
+}
+
+
+
+function toggleDropdown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+
+
+document.querySelector(".jsFilter").addEventListener("click", function () {
+  document.querySelector(".filter-menu").classList.toggle("active");
+});
+
+document.querySelector(".grid").addEventListener("click", function () {
+  document.querySelector(".list").classList.remove("active");
+  document.querySelector(".grid").classList.add("active");
+  document.querySelector(".products-area-wrapper").classList.add("gridView");
+  document
+    .querySelector(".products-area-wrapper")
+    .classList.remove("tableView");
+});
+
+document.querySelector(".list").addEventListener("click", function () {
+  document.querySelector(".list").classList.add("active");
+  document.querySelector(".grid").classList.remove("active");
+  document.querySelector(".products-area-wrapper").classList.remove("gridView");
+  document.querySelector(".products-area-wrapper").classList.add("tableView");
+});
+
+var modeSwitch = document.querySelector('.mode-switch');
+modeSwitch.addEventListener('click', function () {                      document.documentElement.classList.toggle('light');
+ modeSwitch.classList.toggle('active');
+});
+
+
+
+</script>
+
+</body>
+</html>

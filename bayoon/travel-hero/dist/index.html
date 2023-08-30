@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Booking App UI</title>
+<link rel="stylesheet" href="./style.css">
+<meta name="viewport"
+content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Poppins:400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="app-container">
+  <section class="navigation">
+    <a href="#" class="app-link">اسم المشروع السياحي</a>
+    <div class="navigation-links">
+      <a href="#" class="nav-link ">حسابي</a>
+      <a href="#" class="nav-link active">الحجوزات</a>
+      <a href="#" class="nav-link">حول الموقع</a>
+      <a href="#" class="nav-link">تفاصيل المشروع</a>
+    </div>
+    <div class="nav-right-side">
+      <button class="mode-switch">
+       <svg class="sun" fill="none" stroke="#fbb046" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-sun" viewBox="0 0 24 24"><defs/><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  <svg class="moon" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-moon" viewBox="0 0 24 24"><defs/><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+     </button>
+
+    </div>  
+  </section>
+ 
+<header class="header" data-active="1">
+  <div class="header__left">
+    <div class="number">
+      <div class="slide" data-slide="1"></div>
+      <div class="slide" data-slide="2"></div>
+      <div class="slide" data-slide="3"></div>
+      <div class="slide" data-slide="4"></div>
+    </div>
+    <div class="title">
+      <div class="slide" data-slide="1">
+        <div class="title__super">Travel to</div>
+        <div class="title__big"> <span>Tsateatr</span></div>
+      </div>
+      <div class="slide" data-slide="2">
+        <div class="title__super">Relax at</div>
+        <div class="title__big"> <span>Tsateatr</span></div>
+      </div>
+      <div class="slide" data-slide="3">
+        <div class="title__super">Get Lost</div>
+        <div class="title__big"> <span>Tsateatr</span></div>
+      </div>
+      <div class="slide" data-slide="4">
+        <div class="title__super">Explore the</div>
+        <div class="title__big"> <span>Tsateatr</span></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="slide" data-slide="1">
+        <div class="content__blurb">Low-cost flights and last minute internet deals means that cheap holidays are far easier to come by than they used to be.</div><a class="content__link">Find <span>Great Deals</span></a>
+      </div>
+      <div class="slide" data-slide="2">
+        <div class="content__blurb">The term “boutique hotel” has been widely used in recent years, but what does it mean and why should you stay in one?</div><a class="content__link">Find <span>a Tour</span></a>
+      </div>
+      <div class="slide" data-slide="3">
+        <div class="content__blurb">One of the best ways to make a great vacation quickly horrible is to choose the wrong accommodations for your trip. </div><a class="content__link">Find <span>a Route</span></a>
+      </div>
+      <div class="slide" data-slide="4">
+        <div class="content__blurb">The term “boutique hotel” has been widely used in recent years, but what does it mean and why should you stay in one?</div><a class="content__link">Find <span>a Guide</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="header__right">
+    <div class="video">
+      <div class="video__left">
+        <div class="slide" data-slide="1">
+          <video class="video__one" src="swim.mp4"></video>
+          <video class="video__two" src="swim2.mp4"></video>
+        </div>
+        <div class="slide" data-slide="2">
+          <!-- <video class="video__one" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/swan.mp4"></video>
+          <video class="video__two" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/swan.mp4"></video> -->
+        </div>
+        <div class="slide" data-slide="3">
+          <!-- <video class="video__one" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jungle.mp4"></video>
+          <video class="video__two" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jungle.mp4"></video> -->
+        </div>
+        <div class="slide" data-slide="4">
+          <!-- <video class="video__one" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jelly.mp4"></video>
+          <video class="video__two" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jelly.mp4"></video> -->
+        </div>
+      </div>
+      <div class="video__right">
+        <div class="slide" data-slide="1">
+          <video class="video__one" src="swim2.mp4"></video>
+          <video class="video__two" src="swim.mp4"></video>
+        </div>
+        <div class="slide" data-slide="2">
+          <!-- <video class="video__one" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/swan.mp4"></video>
+          <video class="video__two" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/swan.mp4"></video> -->
+        </div>
+        <div class="slide" data-slide="3">
+          <!-- <video class="video__one" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jungle.mp4"></video>
+          <video class="video__two" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jungle.mp4"></video> -->
+        </div>
+        <div class="slide" data-slide="4">
+          <!-- <video class="video__one" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jelly.mp4"></video>
+          <video class="video__two" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/908370/jelly.mp4"></video> -->
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="controls__prev"></div>
+      <div class="controls__indicator"><span>1</span> / 4</div>
+      <div class="controls__next"></div>
+    </div>
+  </div>
+</header>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

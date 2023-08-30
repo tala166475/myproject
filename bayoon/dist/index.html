@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Booking App UI</title>
+<link rel="stylesheet" href="./style.css">
+<meta name="viewport"
+content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'><link rel="stylesheet" href="./style.css">
+
+ <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+ 
+
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500|Roboto:400,500,700&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css'><link rel="stylesheet" href="./style.css">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:900" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="app-container">
+  <section class="navigation">
+    <a href="#" class="app-link">اسم المشروع السياحي</a>
+    <div class="navigation-links">
+      <a href="#" class="nav-link ">حسابي</a>
+      <a href="#" class="nav-link active">الحجوزات</a>
+      <a href="#" class="nav-link">حول الموقع</a>
+      <a href="#" class="nav-link">تفاصيل المشروع</a>
+    </div>
+    <div class="nav-right-side">
+      <button class="mode-switch">
+       <svg class="sun" fill="none" stroke="#fbb046" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-sun" viewBox="0 0 24 24"><defs/><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  <svg class="moon" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-moon" viewBox="0 0 24 24"><defs/><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+     </button>
+      <!-- <button class="profile-btn">
+      <span>بيان العش</span>
+      <img src="https://images.unsplash.com/photo-1492633397843-92adffad3d1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80" alt="pp">
+    </button> -->
+    </div>  
+  </section>
+ 
+
+  <style>
+    .introduction{
+      background-image: url(Damascus_Umayyad_Mosque_6368698875-1.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Tajawal';
+    text-align: center;
+    display: flex;
+    color: white;
+    padding: 1px;
+    min-height: 322px;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    }
+
+  .introduction h1{
+   font-size: 31px;
+  } 
+  .introduction p{
+   font-size: 22px;
+   padding: 0 150px;
+   line-height: 35px;
+   box-shadow: 0 3px 12px #00008024;
+  }
+  </style>
+ <section class="introduction">
+
+  <h1>الجمهورية العربية السورية والسياحة بها</h1>
+  <p>
+    الجمهورية العربية السورية هي دولة في الشرق الأوسط، تحدها تركيا من الشمال، والعراق من الشرق، والأردن وفلسطين من الجنوب، ولبنان والبحر الأبيض المتوسط من الغرب.
+    تتميز سوريا بتاريخها العريق وثقافتها الغنية، وتضم مجموعة متنوعة من المواقع التاريخية والطبيعية الساحرة التي تستحق الزيارة.
+  </p>
+  <p>
+    إحدى المعالم البارزة في سوريا هي مدينة دمشق، والتي تعتبر أقدم مستوطنة حضرية مأهولة في العالم.
+    تتميز بأزقتها الضيقة والمباني العربية التقليدية والأسواق القديمة التي تعكس الثقافة والتاريخ السوري.
+  </p>
+</section>
+
+<!-- partial:index.partial.html -->
+<div class="blog-slider" dir="ltr">
+  <div class="blog-slider__wrp swiper-wrapper">
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content" dir="rtl">
+        <span class="blog-slider__code">#محافظة</span>
+        <div class="blog-slider__title"> محافظة حمص</div>
+        <div class="blog-slider__text"> تقع في وسط سوريا وتعتبر واحدة من أقدم المناطق المأهولة في العالم. تتميز بمعابدها وقلاعها التاريخية، مثل "قلعة حمص" و"مسجد النوري". تضم أيضاً العديد من المنتجعات السياحية الجميلة مثل "الشاطئ الروماني" و "وادي النضارة".</div>
+        <a href="#" class="blog-slider__button">معرفة المزيد</a>
+      </div>
+    </div>
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content"  dir="rtl">
+        <span class="blog-slider__code">#محافظة</span>
+        <div class="blog-slider__title">محافظة حلب</div>
+        <div class="blog-slider__text">واحدة من أكبر المحافظات في سوريا وتعتبر مركزًا تجاريًا وثقافيًا رئيسيًا. تحتوي حلب على العديد من المعابده الأثرية والأسواق التقليدية، مثل "الحرم القدسي" و "سوق الغزلان" و "سوق الصخور".</div>
+        <a href="#" class="blog-slider__button">READ MORE</a>
+      </div>
+    </div>
+    
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content"  dir="rtl">
+        <span class="blog-slider__code">#محافظة</span>
+        <div class="blog-slider__title">محافظة طرطوس</div>
+        <div class="blog-slider__text">تشتهر هذه المحافظة بشواطئها الخلابة والمواقع الأثرية. يُعتبر "قلعة الحصن" و "مرمريتا" من أبرز المعالم السياحية هنا. كما تحتوي المحافظة على العديد من القرى الجميلة في جبالها، مما يجعلها وجهة مثالية لمحبي الطبيعة والاسترخاء.</div>
+        <a href="#" class="blog-slider__button">READ MORE</a>
+      </div>
+    </div>
+
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content"  dir="rtl">
+        <span class="blog-slider__code">#محافظة</span>
+        <div class="blog-slider__title">محافظة اللاذقية</div>
+        <div class="blog-slider__text">تحتوي على ساحل طويل من الشواطئ الجميلة والشعاب المرجانية. يمكن للزوار التمتع بالغوص وركوب الأمواج والنزهات البحرية في هذه المنطقة. كما توجد فيها أيضًا العديد من المعابده الرومانية القديمة مثل "مدينة أمريتا" و "قلعة صليبيخات". </div>
+        <a href="#" class="blog-slider__button">READ MORE</a>
+      </div>
+    </div>
+    
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content"  dir="rtl">
+        <span class="blog-slider__code">#محافظة</span>
+        <div class="blog-slider__title">محافظة طرطوس</div>
+        <div class="blog-slider__text">تشتهر هذه المحافظة بشواطئها الخلابة والمواقع الأثرية. يُعتبر "قلعة الحصن" و "مرمريتا" من أبرز المعالم السياحية هنا. كما تحتوي المحافظة على العديد من القرى الجميلة في جبالها، مما يجعلها وجهة مثالية لمحبي الطبيعة والاسترخاء.</div>
+        <a href="#" class="blog-slider__button">READ MORE</a>
+      </div>
+    </div>
+
+  <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content"  dir="rtl">
+        <span class="blog-slider__code">#محافظة</span>
+        <div class="blog-slider__title">محافظة طرطوس</div>
+        <div class="blog-slider__text">تشتهر هذه المحافظة بشواطئها الخلابة والمواقع الأثرية. يُعتبر "قلعة الحصن" و "مرمريتا" من أبرز المعالم السياحية هنا. كما تحتوي المحافظة على العديد من القرى الجميلة في جبالها، مما يجعلها وجهة مثالية لمحبي الطبيعة والاسترخاء.</div>
+        <a href="#" class="blog-slider__button">READ MORE</a>
+      </div>
+    </div>
+    
+    
+  </div>
+  <div class="blog-slider__pagination"></div>
+</div>
+
+
+
+  <!-- Start of the wrapped and cards location View -->
+  <div class="title">
+    <h2>التصنيفات التي يقدمها الموقع</h2>
+  </div>
+  
+  <section class="app-main">
+  
+    <div class="app-main-left cards-area">
+ 
+    
+      <div class="sales-card">
+        <div class="poster"><img src="https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg" alt="Location Unknown"></div>
+        <div class="details">
+          <h1>المعالم الاثرية</h1>
+          <!-- <h2>نص اضافي حسب الرغبة</h2> -->
+          <div class="rating">
+            <!-- <span>نص اضافي حسب الرغبة</span> -->
+          </div>
+          <div class="tags"> 
+            <span class="tag">قصور</span>
+            <span class="tag">متاحف</span>
+            <span class="tag">قلاع</span>                        
+         </div> 
+          <p class="desc">
+            كانت سوريا مهد الحضارات .......
+          </p>
+          <div class="cast">
+            <!-- <h3>Cast</h3> -->
+            <ul>
+              <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg" alt="Marco Andrews" title="Marco Andrews"></li>
+              <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg" alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+              <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg " alt="Antonio Herrera" title="Antonio Herrera"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sales-card">
+        <div class="poster"><img src="https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg" alt="Location Unknown"></div>
+        <div class="details">
+          <h1>المعالم الاثرية</h1>
+          <!-- <h2>نص اضافي حسب الرغبة</h2> -->
+          <div class="rating">
+            <!-- <span>نص اضافي حسب الرغبة</span> -->
+          </div>
+          <div class="tags"> 
+            <span class="tag">قصور</span>
+            <span class="tag">متاحف</span>
+            <span class="tag">قلاع</span>                        
+         </div> 
+          <p class="desc">
+            كانت سوريا مهد الحضارات .......
+          </p>
+          <div class="cast">
+            <!-- <h3>Cast</h3> -->
+            <ul>
+              <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg" alt="Marco Andrews" title="Marco Andrews"></li>
+              <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg" alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+              <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg " alt="Antonio Herrera" title="Antonio Herrera"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="sales-card">
+        <div class="poster"><img src="https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg" alt="Location Unknown"></div>
+        <div class="details">
+          <h1>المعالم الاثرية</h1>
+          <!-- <h2>نص اضافي حسب الرغبة</h2> -->
+          <div class="rating">
+            <!-- <span>نص اضافي حسب الرغبة</span> -->
+          </div>
+          <div class="tags"> 
+            <span class="tag">قصور</span>
+            <span class="tag">متاحف</span>
+            <span class="tag">قلاع</span>                        
+         </div> 
+          <p class="desc">
+            كانت سوريا مهد الحضارات .......
+          </p>
+          <div class="cast">
+            <!-- <h3>Cast</h3> -->
+            <ul>
+              <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg" alt="Marco Andrews" title="Marco Andrews"></li>
+              <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg" alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+              <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg " alt="Antonio Herrera" title="Antonio Herrera"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="sales-card">
+        <div class="poster"><img src="https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg" alt="Location Unknown"></div>
+        <div class="details">
+          <h1>المعالم الاثرية</h1>
+          <!-- <h2>نص اضافي حسب الرغبة</h2> -->
+          <div class="rating">
+            <!-- <span>نص اضافي حسب الرغبة</span> -->
+          </div>
+          <div class="tags"> 
+            <span class="tag">قصور</span>
+            <span class="tag">متاحف</span>
+            <span class="tag">قلاع</span>                        
+         </div> 
+          <p class="desc">
+            كانت سوريا مهد الحضارات .......
+          </p>
+          <div class="cast">
+            <!-- <h3>Cast</h3> -->
+            <ul>
+              <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg" alt="Marco Andrews" title="Marco Andrews"></li>
+              <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg" alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+              <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg " alt="Antonio Herrera" title="Antonio Herrera"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sales-card">
+        <div class="poster"><img src="https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg" alt="Location Unknown"></div>
+        <div class="details">
+          <h1>المعالم الاثرية</h1>
+          <!-- <h2>نص اضافي حسب الرغبة</h2> -->
+          <div class="rating">
+            <!-- <span>نص اضافي حسب الرغبة</span> -->
+          </div>
+          <div class="tags"> 
+            <span class="tag">قصور</span>
+            <span class="tag">متاحف</span>
+            <span class="tag">قلاع</span>                        
+         </div> 
+          <p class="desc">
+            كانت سوريا مهد الحضارات .......
+          </p>
+          <div class="cast">
+            <!-- <h3>Cast</h3> -->
+            <ul>
+              <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg" alt="Marco Andrews" title="Marco Andrews"></li>
+              <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg" alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+              <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg " alt="Antonio Herrera" title="Antonio Herrera"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="sales-card">
+        <div class="poster"><img src="https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg" alt="Location Unknown"></div>
+        <div class="details">
+          <h1>المعالم الاثرية</h1>
+          <!-- <h2>نص اضافي حسب الرغبة</h2> -->
+          <div class="rating">
+            <!-- <span>نص اضافي حسب الرغبة</span> -->
+          </div>
+          <div class="tags"> 
+            <span class="tag">قصور</span>
+            <span class="tag">متاحف</span>
+            <span class="tag">قلاع</span>                        
+         </div> 
+          <p class="desc">
+            كانت سوريا مهد الحضارات .......
+          </p>
+          <div class="cast">
+            <!-- <h3>Cast</h3> -->
+            <ul>
+              <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg" alt="Marco Andrews" title="Marco Andrews"></li>
+              <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg" alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+              <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg " alt="Antonio Herrera" title="Antonio Herrera"></li>
+            </ul>
+          </div>
+        </div>
+      </div>     
+    
+      
+ 
+    </div>
+
+  </section>
+  <!-- partial:index.partial.html -->
+   <div class="title">
+     <h2>الأماكن الأكثر زيارة</h2>
+   </div>
+<div class="perfect-card-container" dir="ltr">
+  <div class="perfect-card">
+    <h2>قلعةالحصن</h2>
+    <i class="fas fa-arrow-right"></i>
+    <p>محافظة حمص</p>
+    <div class="pic"></div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <button>
+    </button>
+  </div>
+
+  <div class="perfect-card">
+    <h2>أثار تدمر</h2>
+    <i class="fas fa-arrow-right"></i>
+    <p>محافظة حمص</p>
+    <div class="pic"></div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <button>
+    </button>
+  </div>
+
+    <div class="perfect-card card2">
+    <h2>النواعير</h2>
+    <i class="fas fa-arrow-right"></i>
+    <p>محافظة حماة</p>
+    <div class="pic"></div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <button>
+    </button>
+  </div>
+
+
+  
+    <div class="perfect-card card2">
+    <h2>Vauxhall</h2>
+    <i class="fas fa-arrow-right"></i>
+    <p>a lonely trip.</p>
+    <div class="pic"></div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <button>
+    </button>
+  </div>
+
+    
+  <div class="perfect-card card2">
+    <h2>Vauxhall</h2>
+    <i class="fas fa-arrow-right"></i>
+    <p>a lonely trip.</p>
+    <div class="pic"></div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>    <a href="https://www.raafatsir.com">
+    <button>
+    </button></a>
+  </div>
+
+  
+  <div class="perfect-card card2">
+    <h2>Vauxhall</h2>
+    <i class="fas fa-arrow-right"></i>
+    <p>a lonely trip.</p>
+    <div class="pic"></div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <button>
+    </button>
+  </div>
+</div>
+
+
+ <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+  <script  src="./script.js"></script>
+
+  <script> 
+    var swiper = new Swiper('.blog-slider', {
+          spaceBetween: 30,
+          effect: 'fade',
+          loop: true,
+          autoplay:true,
+          mousewheel: {
+            invert: false,
+          },
+          // autoHeight: true,
+          pagination: {
+            el: '.blog-slider__pagination',
+            clickable: true,
+          }
+        });
+    
+      </script>
+     
+</body>
+</html>
